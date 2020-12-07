@@ -42,3 +42,4 @@ steps:
     targetPath: 'tests/results'
     artifact: 'Test result artifact_$(browsers)'
     publishLocation: 'pipeline'
+  condition: succeededOrFailed()
