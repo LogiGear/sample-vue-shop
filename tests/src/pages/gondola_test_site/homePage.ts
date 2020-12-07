@@ -1,7 +1,11 @@
-import { action, gondola, locator, page } from "gondolajs";
+import { action, gondola, locator, page } from "@logigear/gondola";
 
 @page
 export class homePage {
+    constructor() {
+        this._homePageUrl = "https://demo.gondolatest.com";
+    }
+    _homePageUrl: string;
     @locator
     public lblPageTitle = "//main[@class='capsule']//h1";
     @locator
@@ -14,7 +18,7 @@ export class homePage {
     public lblWomenHeader = "//h1[text()=\"Women's\"]";
     @action("open demo web", "Navigate to home page")
     public async navigateTo() {
-        await gondola.navigate("");
+        await gondola.navigate(this._homePageUrl);
         await gondola.maximize();
     }
     @action("check page title displayed", "Check 'Sale' page title is displayed")

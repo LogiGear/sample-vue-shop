@@ -10,7 +10,8 @@ yarn generate
 echo "==================="
 echo "Prepare test scripts"
 cd tests
-npm ci
+npm i
+npm i @logigear/gondola
 npm run compile
 cd ..
 

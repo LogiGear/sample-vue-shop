@@ -4,6 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+		"postinstall": "selenium-standalone install",
+        "start-seleniumserver": "selenium-standalone start",
         "clean": "rimraf built",
         "clean-dev": "./node_modules/.bin/tsc -b --clean --dev",
         "compile": "npm run clean && tsc",
@@ -13,14 +15,15 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "gondolajs": "file:lib/gondolajs-1.6.64.tgz",
+        "@logigear/gondola": "latest",
         "mocha-junit-reporter": "^2.0.0",
         "mocha-multi": "^1.1.3",
-        "mochawesome": "^4.1.0",
+        "mochawesome": "6.1.1",
         "rimraf": "3.0.2",
         "webdriverio": "^5.18.4"
     },
     "devDependencies": {
+		"@wdio/selenium-standalone-service": "6.1.14",
         "@types/node": "^12.12.15",
         "typescript": "^3.7.3"
     }
