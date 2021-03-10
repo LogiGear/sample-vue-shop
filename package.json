@@ -15,7 +15,7 @@
     "axios": "^0.21.0",
     "gsap": "^3.5.1",
     "node-sass": "^5.0.0",
-    "nuxt": "^2.14.5",
+    "nuxt": "^2.15.3",
     "sass-loader": "^10.1.0",
     "vue-stripe-elements-plus": "^0.3.2",
     "vuex": "^3.1.3"
